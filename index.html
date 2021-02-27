@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="None">
+  
+  
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <title>String generator API Doku</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="css/theme.css" />
+  <link rel="stylesheet" href="css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Home";
+    var mkdocs_page_input_path = "index.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="js/jquery-2.1.1.min.js" defer></script>
+  <script src="js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="." class="icon icon-home"> String generator API Doku</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href=".">Home</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#basic-syntax">Basic syntax</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#modes-parameter">Modes parameter</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#length-parameter">Length parameter</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#examples">Examples</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#numbers">numbers</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#letters">letters</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#uppercaseletters">uppercaseLetters</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#lowercaseletters">lowercaseLetters</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#punctuation">punctuation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#allchar">allChar</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href=".">String generator API Doku</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Home</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <p><center></p>
+<h1 id="string-generator-api-docs">String generator API Docs</h1>
+<p>by Alexander Pietsch</p>
+<p></center></p>
+<hr />
+<h2 id="basic-syntax">Basic syntax</h2>
+<p>For a request you need 2 parameters. These are:</p>
+<ul>
+<li>The type of the string which should be generated (mode)</li>
+<li>The length of the string which should be generated (length)</li>
+</ul>
+<p>The basic URL to make a request is:</p>
+<p><a href="http://alexpts.de:8000/api/v1.0/generate?mode=allChar&length=5" target="_blank">http://alexpts.de:8000/api/v1.0/generate?mode={mode}&amp;length={length}</a></p>
+<hr />
+<h2 id="modes-parameter">Modes parameter</h2>
+<p>There are 6 different types of strings to generate. These are:</p>
+<ol>
+<li>numbers (returns an integer)</li>
+<li>letters</li>
+<li>uppercaseLetters</li>
+<li>lowercaseLetters</li>
+<li>punctuation</li>
+<li>allChar</li>
+</ol>
+<p>To see how they work and view their output click on a mode and view the example oder explore them below.</p>
+<hr />
+<h2 id="length-parameter">Length parameter</h2>
+<p>The <code>length</code> parameter simply says how long the string to generate should be.</p>
+<p>The maximum length is 120 characters. The minimum is 1 (who’d have thought).</p>
+<hr />
+<h2 id="examples">Examples</h2>
+<p>Modes and their example output</p>
+<h3 id="numbers">numbers</h3>
+<p>Returns an integer of length N.</p>
+<p>Example URL: <a href="http://alexpts.de:8000/api/v1.0/generate?mode=numbers&length=5" target="_blank">http://alexpts.de:8000/api/v1.0/generate?mode=numbers&amp;length=5</a></p>
+<p>output:</p>
+<pre><code class="language-json">[
+   {
+      &quot;generatedString&quot;: 17181,
+      &quot;mode&quot;: &quot;numbers&quot;,
+      &quot;stringLength&quot;: 5
+   }
+]
+</code></pre>
+<h3 id="letters">letters</h3>
+<p>Returns a string of length N.</p>
+<p>Example URL: <a href="http://alexpts.de:8000/api/v1.0/generate?mode=letters&length=5" target="_blank">http://alexpts.de:8000/api/v1.0/generate?mode=letters&amp;length=5</a></p>
+<p>output:</p>
+<pre><code class="language-json">[
+   {
+      &quot;generatedString&quot;: &quot;VSNrT&quot;,
+      &quot;mode&quot;: &quot;letters&quot;,
+      &quot;stringLength&quot;: 5
+   }
+]
+</code></pre>
+<h3 id="uppercaseletters">uppercaseLetters</h3>
+<p>Returns a string of length N. </p>
+<p>Example URL: <a href="http://alexpts.de:8000/api/v1.0/generate?mode=uppercaseLetters&length=5" target="_blank">http://alexpts.de:8000/api/v1.0/generate?mode=uppercaseLetters&amp;length=5</a></p>
+<pre><code class="language-json">[
+   {
+      &quot;generatedString&quot;: &quot;SBOWL&quot;,
+      &quot;mode&quot;: &quot;uppercaseLetters&quot;,
+      &quot;stringLength&quot;: 5
+   }
+]
+</code></pre>
+<h3 id="lowercaseletters">lowercaseLetters</h3>
+<p>Returns a string of length N. </p>
+<p>Example URL: <a href="http://alexpts.de:8000/api/v1.0/generate?mode=lowercaseLetters&length=5" target="_blank">http://alexpts.de:8000/api/v1.0/generate?mode=lowercaseLetters&amp;length=5</a></p>
+<pre><code class="language-json">[
+   {
+      &quot;generatedString&quot;: &quot;kxzyr&quot;,
+      &quot;mode&quot;: &quot;lowercaseLetters&quot;,
+      &quot;stringLength&quot;: 5
+   }
+]
+</code></pre>
+<h3 id="punctuation">punctuation</h3>
+<p>Returns a string of length N. </p>
+<p>Example URL: <a href="http://alexpts.de:8000/api/v1.0/generate?mode=punctuation&length=5" target="_blank">http://alexpts.de:8000/api/v1.0/generate?mode=punctuation&amp;length=5</a></p>
+<pre><code class="language-json">[
+   {
+      &quot;generatedString&quot;: &quot;^&gt;(=$&quot;,
+      &quot;mode&quot;: &quot;punctuation&quot;,
+      &quot;stringLength&quot;: 5
+   }
+]
+</code></pre>
+<h3 id="allchar">allChar</h3>
+<p>Returns a string of length N. </p>
+<p>Example URL: <a href="http://alexpts.de:8000/api/v1.0/generate?mode=allChar&length=5" target="_blank">http://alexpts.de:8000/api/v1.0/generate?mode=allChar&amp;length=5</a></p>
+<pre><code class="language-json">[
+   {
+      &quot;generatedString&quot;: &quot;8.A$vR&quot;,
+      &quot;mode&quot;: &quot;allChar&quot;,
+      &quot;stringLength&quot;: 5
+   }
+]
+</code></pre>
+<hr />
+              
+            </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+      
+    </span>
+</div>
+    <script>var base_url = '.';</script>
+    <script src="js/theme.js" defer></script>
+      <script src="search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
+
+<!--
+MkDocs version : 1.1.2
+Build Date UTC : 2021-02-27 10:11:41.938470+00:00
+-->
